@@ -6,3 +6,5 @@ deploy latest zabbix agent on debian nodes using ansible
 Zabbix Agent Version 3.0
 
 ### Installation
+
+Test
