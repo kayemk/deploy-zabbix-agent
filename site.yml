@@ -1,0 +1,14 @@
+---
+# This playbook deploys zabbix agents & configurations
+
+# Apply common configuration to all hosts
+- hosts: all
+  gather_facts: yes
+  become: yes
+
+# Configure and deploy agent
+- hosts: agents
+  become: yes
+  gather_facts: yes
+  roles:
+    - agent
