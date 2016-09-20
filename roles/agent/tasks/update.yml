@@ -1,0 +1,16 @@
+---
+
+- name: "Install deb repository for zabbix 3.0"
+  apt_repository: 
+    repo: "deb http://repo.zabbix.com/zabbix/3.0/debian/ jessie main"
+    state: present
+
+- name: "Install deb-src repository for zabbix 3.0"
+  apt_repository: 
+    repo: "deb-src http://repo.zabbix.com/zabbix/3.0/debian/ jessie main"
+    state: present
+
+- name: "Install gpg key from zabbix"
+  apt_key: 
+    id: 79EA5ED4
+    url: "http://repo.zabbix.com/zabbix-official-repo.key"

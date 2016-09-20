@@ -1,0 +1,23 @@
+---
+
+- include: update.yml
+
+- name: install zabbix agent 
+  apt: 
+    name: "{{ item }}" 
+    update_cache: yes
+    state: latest
+    force: yes
+    cache_valid_time: 3600
+  with_items:
+    - zabbix-agent
+
+- name: copy agent conf
+  template:
+    src: roles/agent/templates/zabbix_agentd.conf.j2
+    dest: /etc/zabbix/zabbix_agentd.conf
+    mode: 0755
+    owner: zabbix
+    group: zabbix
+
+- include: handlers/main.yml

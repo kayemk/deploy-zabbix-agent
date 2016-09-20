@@ -1,0 +1,5 @@
+---
+
+- name: zabbix-agent restarted
+  command: "/etc/init.d/zabbix-agent restart"
+  ignore_errors: yes

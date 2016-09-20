@@ -1,0 +1,13 @@
+---
+# 
+
+log_location: /var/log/zabbix/zabbix_agentd.log
+pid_location: /var/run/zabbix/zabbix_agentd.pid
+log_file_size: 1
+debug_level: 3
+listen_port: 10050
+
+monitoring_server: monitoring.idh-online.com
+#monitoring_server: 217.91.57.66
+monitoring_server_local: 192.168.77.18
+start_agents: 3
