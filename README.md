@@ -7,6 +7,11 @@ Zabbix Agent Version 3.0
 
 ### Installation
 
+```
+git clone https://github.com/kayemk/deploy-zabbix-agent.git
+cd deploy-zabbix-agent
+```
+
 ### Usage
 
 <i>ansible 2.1 at least as control node</i>
