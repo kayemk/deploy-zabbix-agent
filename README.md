@@ -7,11 +7,16 @@ Zabbix Agent Version 3.0
 
 ### Installation
 
+```
+git clone https://github.com/kayemk/deploy-zabbix-agent.git
+cd deploy-zabbix-agent
+```
+
 ### Usage
 
 <i>ansible 2.1 at least as control node</i>
 
-* Activate ssh connection for root user in sshd.
+* Activate ssh connection for root user.
 * Modify hosts.ini and if needed ansible.cfg. Don't modify the `gather_facts` because they are needed for hostname validation on zabbix_agentd.conf. 
 * After that you're good to go.
 
@@ -19,4 +24,4 @@ Zabbix Agent Version 3.0
 ansible-playbook site.yml --ask-pass
 ```
 
-* Deactivate ssh connection for root user in sshd.
+* Deactivate ssh connection for root user.
