@@ -20,4 +20,10 @@
     owner: zabbix
     group: zabbix
 
-- include: handlers/main.yml
+- name: enable and start zabbix
+  service:
+    name: zabbix-agent
+    enabled: yes
+    state: restarted
+
+    #- include: handlers/main.yml
